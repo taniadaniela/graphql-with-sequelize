@@ -2,15 +2,8 @@ import Sequelize from 'sequelize';
 import Faker from 'faker';
 import _ from 'lodash';
 
-const Conn = new Sequelize(
-  'relay',
-  'postgres',
-  'postgres',
-  {
-    dialect: 'postgres',
-    host: 'localhost'
-  }
-);
+//db.js
+const Conn = new Sequelize(process.env.DATABASE_URL);
 
 const Person = Conn.define('person', {
   firstName: {
