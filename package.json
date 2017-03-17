@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/.bin/babel-node server/server.js"
+    "start": "nodemon ./server/server.js --exec babel-node"
   },
   "author": "",
   "license": "ISC",
@@ -27,5 +27,8 @@
     "pg-hstore": "^2.3.2",
     "sequelize": "3.30.0",
     "sequelize-cli": "2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
